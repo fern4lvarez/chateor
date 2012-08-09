@@ -17,6 +17,7 @@ To get `meteor-chat` from GitHub:
 
     git clone git://github.com/fern4lvarez/meteor-chat.git
     cd meteor-chat
+    meteor add bootstrap
     meteor
 
 ### Try it
