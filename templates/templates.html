@@ -1,0 +1,62 @@
+<template name="header">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Meteor Chat</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+</template>
+
+<template name="entry">
+  <div class="container">
+    <div class="hero-unit">
+      <h1>This is a Meteor Chat</h1>
+      <p>
+        <input type="text" id="name" placeholder="Your name">
+        <input type="text" id="messageBox" placeholder="Your message">
+      </p>
+    </div>
+  </div>
+</template>
+
+<template name="messages">
+  <div class="container" id="messages">
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="message">
+  <p><strong>{{name}}: </strong> {{message}} [{{today}}]</p>
+</template>
+
+<template name="footer">
+  <div class="container" id="footer">
+    <footer>
+      Made by {{> me}}. Based on {{> tutorial}}. {{> fork}}
+    </footer>
+  </div>
+</template>
+
+<template name="me">
+  <a href="http://twitter.com/fern4lvarez">@fern4lvarez</a>
+</template>
+
+<template name="tutorial">
+  <a href="http://vimeo.com/40300075">this tutorial</a>
+</template>
+
+<template name="fork">
+  <a href="http://github.com/fern4lvarez/meteor-chat"><strong>Fork it!</strong></a>
+</template>
