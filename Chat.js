@@ -1,3 +1,4 @@
+
 Messages = new Meteor.Collection('messages');
 
 var objToday = new Date(),
@@ -5,6 +6,13 @@ var objToday = new Date(),
                 curMinute = objToday.getMinutes() < 10 ? "0" + objToday.getMinutes() : objToday.getMinutes(),
                 curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
 var today = curHour + ":" + curMinute + curMeridiem;// + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
+
+var city = "";
+
+function your_callback(data) {
+  // do something with data
+  city = data.city || "Unknown";
+}
 
 if (Meteor.is_client) {
   ////////// Helpers for in-place editing //////////
@@ -43,7 +51,7 @@ if (Meteor.is_client) {
       var nameEntry = document.getElementById("name");
       if (nameEntry.value != "") {
         var ts = Date.now() / 1000;
-        Messages.insert( { name: nameEntry.value, message: text, time: ts, today: today } );
+        Messages.insert( { name: nameEntry.value, message: text, time: ts, today: today, city: city } );
         event.target.value = "";
       }
     }
