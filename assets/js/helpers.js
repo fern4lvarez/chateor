@@ -5,9 +5,11 @@ var objToday = new Date(),
 var today = curHour + ":" + curMinute + curMeridiem;// + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
 
 var city = "Unknown";
+var ip = "0.0.0.0"
 function your_callback(data) {
   // do something with data
   city = data.city || city;
+  ip = data.host || ap;
 }
 
 ////////// Helpers for in-place editing //////////
