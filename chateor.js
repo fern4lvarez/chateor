@@ -22,7 +22,9 @@ if (Meteor.is_client) {
           console.log("add " + nameEntry.value);
         }
         var ts = Date.now() / 1000;
-        Messages.insert( { name: nameEntry.value, message: text, time: ts, today: today, city: city } );
+        var os = platform();
+        
+        Messages.insert( { name: nameEntry.value, message: text, time: ts, today: today, city: city, os: os } );
         event.target.value = "";
         
       }

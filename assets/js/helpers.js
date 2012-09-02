@@ -53,5 +53,10 @@ var exists_user = function (nameEntry) {
   }
 };
 
+var platform = function () {
+  console.log(window.navigator.platform);
+  return window.navigator.platform;
+}
+
 
 

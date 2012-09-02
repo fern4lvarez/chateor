@@ -25,3 +25,7 @@ div.hero-unit {
 #footer {
   padding-top: 100px;
 }
+
+p.message:hover {
+  background-color: #47464A;
+}
