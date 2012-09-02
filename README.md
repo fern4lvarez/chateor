@@ -22,7 +22,7 @@ To get `meteor-chat` from GitHub:
 
 ### Try it
 
-You can try it [here](http://fern4lvarez-chat.meteor.com).
+You can try it [here](http://chateor.meteor.com).
 
 ### Contribute
 
