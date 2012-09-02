@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+body{
+  background-color: #202126;
+  color: #FFF;
+}
+
+input#messageBox {
+  width: 400px;
+}
+
+input#name {
+  text-align: center;
+}
+
+div.hero-unit {
+  color: #000;
+  text-align: center;
+  margin-top: 80px;
+}
+
+#messages {
+  font-size: 20px;
+}
+
+#footer {
+  padding-top: 100px;
+}
