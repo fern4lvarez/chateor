@@ -25,9 +25,16 @@
   <div class="container entry-container">
     <div class="hero-unit">
       <h1>This is Chateor</h1>
-      <h2> Y U NO START CHATTING?</h2>
+      {{#if signedin}}
+        <h2>{{signedin.value}}, Y U NO START CHATTING?</h2>
+      {{/if}}
+      {{#unless signedin}}
+        <h2> Y U NO START CHATTING?</h2>
+      {{/unless}}
       <p>
-        <input type="text" id="name" placeholder="Your name">
+        {{#unless signedin}}
+          <input type="text" id="name" placeholder="Your name">
+        {{/unless}}
         <input type="text" id="messageBox" placeholder="Your message">
       </p>
     </div>
