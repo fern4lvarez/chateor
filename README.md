@@ -13,10 +13,10 @@ A simple chat using Meteor environment, mainly based on [@tomtheplank](http://tw
 
 ### Installing
 
-To get `meteor-chat` from GitHub:
+To get `chateor` from GitHub:
 
-    git clone git://github.com/fern4lvarez/meteor-chat.git
-    cd meteor-chat
+    git clone git://github.com/fern4lvarez/chateor.git
+    cd chateor
     meteor add bootstrap
     meteor
 
