@@ -38,3 +38,15 @@ var make_okcancel_handler = function (options) {
     }
   };
 };
+
+// Determinate whether a user already exists
+var exists_user = function (nameEntry) {
+  if (Users.findOne( {name: nameEntry.value} ) == null) {
+    console.log(nameEntry.value + " does not exist.");
+    return false;
+  }
+  else {
+    console.log(nameEntry.value + " already exists.");
+    return true;
+  }
+};
